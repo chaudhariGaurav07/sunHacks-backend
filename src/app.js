@@ -21,10 +21,12 @@ app.use(cookieParser())
 //routes import
 import authRouter from './routes/auth.routes.js'
 import guideRouter from './routes/guide.routes.js'
+import gamifiedRouter from "./routes/gamification.routes.js"
 
 //routes declaration
 app.use("/api/v1/auth",authRouter)
 app.use("/api/v1/guides",guideRouter)
+app.use("/api/v1/gamified",gamifiedRouter)
 
 
 export {app}
