@@ -18,6 +18,10 @@ app.use(express.static("public"))
 // to perform crud ops and access the cokiees from user browser
 app.use(cookieParser())
 
+//routes import
+import userRouter from './routes/auth.routes.js'
 
+//routes declaration
+app.use("/api/v1/auth",userRouter)
 
 export {app}
