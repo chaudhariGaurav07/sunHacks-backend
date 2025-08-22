@@ -3,7 +3,7 @@ import Progress from "../models/Progress.js";
 import Badge from "../models/Badge.js";
 import { getLeaderboard } from "../services/leaderboard.service.js";
 
-// ✅ Update streak
+// Update streak
 export const updateStreak = async (req, res, next) => {
   try {
     const userId = req.user._id;

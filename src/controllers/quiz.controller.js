@@ -1,4 +1,4 @@
-import { generateQuiz } from "../services/quiz.service.js";
+import { generateQuiz, evaluateQuiz, getUserQuizzes} from "../services/quiz.service.js";
 
 /**
  * Create a quiz from uploaded text/PDF content
