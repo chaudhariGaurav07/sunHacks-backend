@@ -1,3 +1,7 @@
+import dotenv from "dotenv";
+dotenv.config(); // <-- loads .env variables
+
+
 import express from "express"
 import cors from "cors"
 import cookieParser from "cookie-parser"
@@ -22,11 +26,13 @@ app.use(cookieParser())
 import authRouter from './routes/auth.routes.js'
 import guideRouter from './routes/guide.routes.js'
 import gamifiedRouter from "./routes/gamification.routes.js"
+import quizRoute from "./routes/quiz.routes.js"
 
 //routes declaration
 app.use("/api/v1/auth",authRouter)
 app.use("/api/v1/guides",guideRouter)
 app.use("/api/v1/gamified",gamifiedRouter)
+app.use("/api/v1/quiz",quizRoute)
 
 
 export {app}
