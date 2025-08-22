@@ -4,8 +4,6 @@ import {authMiddleware} from "../middleware/auth.js";
 
 const router = Router();
 
-// POST /api/chatbot/message
-// Body: { message, context }
 router.post("/message", authMiddleware, sendMessage);
 
 export default router;
