@@ -25,11 +25,13 @@ const PORT = process.env.PORT || 5000;
 connectDB();
 
 // Middleware
-app.use(helmet());
 app.use(cors({
   origin: ['http://localhost:5173', 'http://localhost:3000', 'https://studygeniev1.vercel.app'],
   credentials: true
 }));
+app.options("*", cors());
+app.use(helmet());
+
 app.use(morgan('combined'));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
